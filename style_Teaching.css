@@ -1,0 +1,173 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.sidebar{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #042331;
+    transition: all .5s ease;
+}
+.sidebar header{
+    font-family:cursive;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    text-indent: -50px;
+    line-height: 60px;
+    background: #063146;
+    user-select: none;
+    font-style: italic;
+}
+.sidebar ul a{
+    font-size: 14.5px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 56px;
+    color: white;
+    padding-left: 25px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+ul li:hover a{
+    padding-left: 50px;
+}
+.sidebar ul a i{
+    margin-right: 12px;
+    font-size: 17px;
+}
+#check {
+    display: none;
+}
+label #btn {
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+}
+label #cancel {
+    position: fixed;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+}
+label #btn{
+    left: 20px;
+    top: 14px;
+    font-size: 25px;
+    color: white;
+    padding: 6px 9px;
+    transition: all .5s;
+}
+label #cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 20px;
+    color: white;
+    padding: 2.5px 5px;
+    transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+#check:checked ~ section{
+    margin-left: 250px;
+}
+#check:checked ~ section h1{
+    margin-left: 20px;
+}
+section{
+    background: url(Fond_baleines_original.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: all .5s;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(92, 92, 92);
+}
+section h1{
+    font-size: 30px;
+    margin-left: 70px;
+    transition: .5s;
+}
+section p{
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 17px;
+    line-height: 1.2;
+    margin-right: 15vh;
+}
+.select{
+    background-color: #0f4169;
+}
+.scrollable-content {
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+.scrollable-content::-webkit-scrollbar {
+    display: none; /* Webkit-based browsers (Chrome, Safari, Opera) */
+}
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.text-zone {
+    width: 30%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.61);
+}
+.text-zone p{
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 7px;
+    font-weight: 400;
+    font-family: inherit;
+    color: #474b4e;
+    font-style: italic;
+}
+.text-zone h2{
+    font-size: 18px;
+    margin-left: 15px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    color: #474b4e;
+    font-weight: 550;
+}
+.intro{
+    margin-top: 20px;
+    text-indent: 37px;
+}
+.update_status{
+    margin-top: 4px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    font-weight: 100;
+}
