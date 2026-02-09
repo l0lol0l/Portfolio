@@ -196,7 +196,7 @@ main li {
 .image-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -207,7 +207,7 @@ main li {
 .image-item {
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-    height: 200px;
+    height: 175px;
     object-fit: cover;
     width: auto;
 }
@@ -342,8 +342,10 @@ main li {
 /* Tablet Styles (768px - 1024px) */
 @media (max-width: 1024px) {
     main h1 {
-        font-size: 24px;
-        left: 50px;
+        font-size: 22px;
+        left: 70px;
+        top: 10px;
+        z-index: 3;
     }
 
     main p {
@@ -355,8 +357,16 @@ main li {
         font-size: 24px;
     }
 
+    .image-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
     .image-item {
-        height: 150px;
+        height: auto;
+        width: 80%;
+        max-width: 400px;
     }
 
     .sidebar ul a {
@@ -377,11 +387,13 @@ main li {
     }
 
     main h1 {
-        font-size: 20px;
-        left: 20px;
-        top: 10px;
-        width: calc(100% - 40px);
-        text-align: center;
+        font-size: 16px;
+        left: 70px;
+        top: 11px;
+        width: calc(100% - 80px);
+        text-align: left;
+        z-index: 5;
+        padding-bottom: 100px
     }
 
     main p {
@@ -409,14 +421,14 @@ main li {
     }
 
     .image-item {
-        height: 120px;
+        height: auto;
         width: 80%;
         max-width: 300px;
     }
 
     .scrollable-content {
         padding: 10px 15px 20px;
-        top: 40px;
+        top: 51px;
         height: calc(100vh - 40px);
     }
 
