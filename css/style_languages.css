@@ -1,0 +1,343 @@
+/* ===============================
+   CSS Variables
+   =============================== */
+:root {
+    --accent-bg: #1f5581;
+    --hover-bg: #0f4169;
+    --primary-bg: #042331;
+    --secondary-bg: #063146;
+    --submenu-bg: #073348;
+    --submenu-text: #e9f1f6;
+    --text-color: white;
+    --dot:#587fff;
+    --dot-active:#777777;
+    --language-text:#2E4053;
+    --level-text:#374655;
+    --comment-text:#424949;
+}
+
+/* ===============================
+   Global Styles
+   =============================== */
+* {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ===============================
+   Sidebar
+   =============================== */
+.sidebar {
+    background: var(--primary-bg);
+    height: 100vh;
+    left: -250px;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    overflow-y: auto;
+    position: fixed;
+    scrollbar-width: none; /* Firefox */
+    transition: all .5s ease;
+    width: 250px;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none; /* Webkit-based browsers (Chrome, Safari, Opera) */
+}
+
+.sidebar header {
+    background: var(--secondary-bg);
+    color: var(--text-color);
+    font-family: cursive;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 60px;
+    position: sticky;
+    text-align: center;
+    text-indent: -50px;
+    top: 0;
+    user-select: none;
+    z-index: 1;
+}
+
+.sidebar ul a {
+    border-bottom: 1px solid black;
+    border-top: 1px solid rgba(255,255,255,.1);
+    box-sizing: border-box;
+    color: var(--text-color);
+    display: block;
+    font-size: 14.5px;
+    height: 100%;
+    line-height: 56px;
+    padding-left: 25px;
+    width: 100%;
+}
+
+.sidebar ul a i {
+    font-size: 17px;
+    margin-right: 12px;
+}
+
+/* ===============================
+   Submenu
+   =============================== */
+.has-submenu {
+    position: relative;
+}
+
+.submenu-toggle {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+.submenu-label {
+    border-bottom: 1px solid black;
+    border-top: 1px solid rgba(255,255,255,.1);
+    color: var(--text-color);
+    cursor: pointer;
+    display: block;
+    font-size: 14.5px;
+    height: 56px;
+    line-height: 56px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.submenu-label i {
+    font-size: 17px;
+    margin-right: 12px;
+}
+
+.caret {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+    position: absolute;
+    right: 17px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform .25s ease;
+}
+
+.submenu {
+    background: var(--submenu-bg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s ease;
+}
+
+.submenu li a {
+    border-bottom: none;
+    border-top: 1px solid rgba(255,255,255,.06);
+    color: var(--submenu-text);
+    display: block;
+    font-size: 13.5px;
+    line-height: 48px;
+    padding-left: 32px;
+}
+
+.submenu-toggle:checked ~ .maritime-submenu {
+    max-height: 200px;
+}
+
+.submenu-toggle:checked ~ .competitive-submenu {
+    max-height: 250px;
+}
+
+.submenu-toggle:checked ~ .recreational-submenu {
+    max-height: 150px;
+}
+
+.submenu-toggle:checked ~ .submenu-label .caret,
+.submenu-toggle:checked + .submenu-label .caret {
+    transform: rotate(-135deg);
+}
+
+/* ===============================
+   Navigation Controls
+   =============================== */
+#check {
+    display: none;
+}
+
+label #btn {
+    background: var(--primary-bg);
+    border-radius: 3px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 25px;
+    left: 20px;
+    padding: 6px 9px;
+    position: absolute;
+    top: 14px;
+    transition: all .5s ease;
+    z-index: 2;
+}
+
+label #cancel {
+    background: var(--primary-bg);
+    border-radius: 3px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 20px;
+    left: -195px;
+    padding: 2.5px 5px;
+    position: fixed;
+    top: 17px;
+    transition: all .5s ease;
+    z-index: 1111;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#check:checked ~ label #btn {
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+    left: 195px;
+}
+
+#check:checked ~ main {
+    margin-left: 250px;
+}
+
+#check:checked ~ main .scrollable-content {
+    left: 250px;
+}
+
+/* ===============================
+   Main Content
+   =============================== */
+main {
+    background: url("../assets/images/background_languages.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--text-color);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    text-shadow: 1px 1px 2px rgb(92, 92, 92);
+    transition: all .5s;
+}
+
+main h1 {
+    font-size: 30px;
+    left: 70px;
+    position: absolute;
+    top: 14px;
+    transition: .5s;
+    z-index: 1;
+}
+
+.language-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #b1b0b0;
+    border-radius: 15px;
+    padding: 1.25rem;
+    width: 55%;
+    background-color: #ffffff9d;
+}
+
+.language {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    margin-top: 7px;
+    color: var(--language-text);
+}
+
+.level {
+    font-size: 1.05em;
+    color: var(--level-text);
+    margin-bottom: 7px;
+}
+
+.scale {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: var(--dot);
+    margin-bottom: 5px;
+}
+
+.active {
+    background-color: var(--dot-active) ;
+}
+
+.comment {
+    font-size: 0.9em;
+    color: var(--comment-text);
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.select {
+    background-color: var(--accent-bg);
+}
+
+/* ===============================
+   Scrollable Content
+   =============================== */
+.scrollable-content {
+    height: calc(100vh - 80px);
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    overflow-y: auto;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    scrollbar-width: none; /* Firefox */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: left 0.5s ease;
+}
+
+.scrollable-content::-webkit-scrollbar {
+    display: none; /* Webkit-based browsers (Chrome, Safari, Opera) */
+}
+
+.update_status {
+    color: var(--text-color);
+    font-size: 13px;
+    font-weight: 100;
+    margin-top: 4px;
+    text-align: center;
+}
+
+/* ===============================
+   Interactions
+   =============================== */
+.menu-item {
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: var(--hover-bg);
+    padding-left: 42px;
+}
+
+.menu-item:active {
+    background-color: #ffffffbe;
+    transform: scale(0.90);
+}

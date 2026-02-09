@@ -3,12 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="google-site-verification" content="FkZ6N_JnxZrB6vo37bDQsZwipGlFPO6m3vjBI2DOjjA" />
-        <meta name="description" content="Official portfolio of Loïck Eeman, an 18-year-old student passionate about sailing, technology, STEM, and life at sea.">
+        <meta name="description" content="Official portfolio of Loïck Eeman, a 19-year-old maritime student passionate about the sea.">
         <title>Loïck Eeman - Portfolio & Personal Website</title>
-        <link rel="icon" type="image/png" href="favicon_portfolio.png">
-        <link rel="stylesheet" href="style_home.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-        <script src=""></script>
+        <link rel="icon" type="image/png" href="assets/icons/favicon_portfolio.png">
+        <link rel="stylesheet" href="css/style_home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     </head>
     <body>
         <input type="checkbox" id="check">
@@ -16,33 +15,101 @@
             <i class="fas fa-bars" id="btn"></i>
             <i class="fas fa-times" id="cancel"></i>
         </label>
-     <div class="sidebar">
+     <nav class="sidebar" role="navigation" aria-label="Main navigation">
         <header>Loïck Eeman : <br>My Portfolio</header>
         <ul>
-            <li><a href="index.html" class="select"><i>&#127969</i>Home</a></li>
-            <li><a href="Portfolio_presentation.html"><i>&#128587</i>Personal Introduction</a></li>
-            <li><a href="Portfolio_Life_at_Sea.html"><i>&#9973</i>Life at Sea</a></li>
-            <li><a href="Portfolio_My_School_Life.html"><i>&#128218;</i>My School Life</a></li>
-            <li><a href="Portfolio_My_Passions.html"><i>&#128293;</i>My Passions</a></li>
-            <li><a href="Portfolio_Teaching.html"><i>&#x1F468;&#x200D;&#x1F3EB;</i>Volunteering</a></li>
-            <li><a href="Portfolio_Languages.html"><i>&#128483</i>Languages</a></li>
-            <li><a href="Portfolio_My_Future.html"><i>&#9203;</i>My Future</a></li>
-            <li class="update_status">Last Updated 28/04/2024</li>
+            <li><a href="index.html" class="select menu-item"><i>&#127969</i>Home</a></li>
+            <li><a href="" class="menu-item"><i>&#129517</i>Summary</a></li>
+            <li class="has-submenu">
+                <input type="checkbox" id="maritime-career-toggle" class="submenu-toggle" />
+                <label for="maritime-career-toggle" class="submenu-label menu-item">
+                    <i>&#9875</i>Maritime Career<span class="caret"></span>
+                </label>
+                <ul class="submenu maritime-submenu">
+                    <li><a href="" class="menu-item"><i>&#128674</i>Professional Experience</a></li>
+                    <li><a href="" class="menu-item"><i>&#127891</i>Certifications</a></li>
+                    <li><a href="" class="menu-item"><i>&#128218</i>Education & Training</a></li>
+                    <li><a href="" class="menu-item"><i>&#127919</i>Careers Goals</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <input type="checkbox" id="competitive-sailing-toggle" class="submenu-toggle" />
+                <label for="competitive-sailing-toggle" class="submenu-label menu-item">
+                    <i>&#9973</i>Competitive Sailing<span class="caret"></span>
+                </label>
+                <ul class="submenu competitive-submenu">
+                    <li><a href="" class="menu-item"><i>&#127754</i>My Sailing Journey</a></li>
+                    <li><a href="" class="menu-item"><i>&#127937</i>Racing Experience</a></li>
+                    <li><a href="" class="menu-item"><i>&#127942</i>Results</a></li>
+                    <li><a href="" class="menu-item"><i>&#128170</i>Training & Development</a></li>
+                    <li><a href="" class="menu-item"><i>&#128640</i>Ambitions & Goals</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <input type="checkbox" id="recreational-cruising-toggle" class="submenu-toggle" />
+                <label for="recreational-cruising-toggle" class="submenu-label menu-item">
+                    <i>&#128506</i>Recreational Cruising<span class="caret"></span>
+                </label>
+                <ul class="submenu recreational-submenu">
+                    <li><a href="" class="menu-item"><i>&#127757</i>The 4-Year Voyage</a></li>
+                    <li><a href="" class="menu-item"><i>&#128507</i>Patagonia Expedition</a></li>
+                    <li><a href="" class="menu-item"><i>&#128039</i>Antarctica Expedition</a></li>
+                </ul>
+            </li>
+            <li><a href="pages/Languages.html" class="menu-item"><i>&#128483</i>Languages</a></li>
+            <li><a href="" class="menu-item"><i>&#128221</i>Downloadable CVs</a></li>
+            <li><a href="" class="menu-item"><i>&#128231</i>Contacts</a></li>
         </ul>
-     </div>
-     <section>
-        <br>
-        <h1>Loïck EEMAN : My Portfolio</h1>
+        <footer class="update_status">Last Updated 30/01/2026</footer>
+     </nav>
+     <main>
+        <h1>Loïck Eeman : Maritime Cadet • Competitive Sailor • Offshore Explorer</h1>
         <div class="scrollable-content">
-            <p>Hello and welcome ! I'm Loïck Eeman, a 18 years old student with a passion for sailing, computer sciences, and STEM (Science, Technology, Engineering, and Mathematics). Within this portfolio, I invite you to explore the intersection of these diverse interests and the unique perspective they bring to my life.
-            </p>
+            <section>
+                <h2>Welcome to My Official Portfolio</h2>
+                <p>My name is <strong>Loïck Eeman</strong>, and I am a 19-year-old maritime cadet with a lifelong passion for the sea.
+                Through professional training, competitive sailing, and early offshore adventures, the ocean has shaped who I am and the career I am working toward today.
+                <br>This website - which I designed and coded myself - brings together my experiences, goals, and the different paths I'm pursuing within the maritime world. </p>
+            </section>
+            <section>
+                <h2>About Me</h2>
+                <p>I am currently training toward my Watchkeeper <strong>Deck certificate</strong>, developing my skills through navigation practice, deck operations, and sea time.
+                My connection to the sea began early in life. I grew up <strong>racing dinghies</strong>, and later spent nearly <strong>four years cruising internationally</strong> with my family. A journey that eventually brought us to New Zealand and confirmed my desire to build a maritime career.
+                Today, I remain active in <strong>keelboat match racing</strong>, and I enjoy <strong>wingfoiling</strong> recreationally. <br>Whether professionally or recreationally, the ocean continues to be the center of my life.</p>
+            </section>
             <div class="image-container">
-                <img class="image-item" src="Ma_Photo_Lycee.jpg" alt="Image 1">
-                <img class="image-item" src="Ma_Photo_Quai.jpg" alt="Image 2">
+                <img class="image-item" src="assets/images/Photo_VB_Abeille_Normandie.jpg" alt="VB Abeille Normandie, the ship maritime cadet Loïck Eeman did his cadetship on">
+                <img class="image-item" src="assets/images/Photo_Opti.jpg" alt="Young competitive sailor Loïck Eeman racing Optimist">
+                <img class="image-item" src="assets/images/Photo_Milonga.jpg" alt="Drone shot of sailing boat Milonga used for 4-year offshore cruising voyage with tropical blue water and atoll">
+                <img class="image-item" src="assets/images/Photo_Match_Racing.jpg" alt="Keelboat match racing team on the rail, featuring Loïck Eeman's trimming his mainsail">
+                <img class="image-item" src="assets/images/Photo_Wingfoil_Sunset.jpg" alt="Wingfoiling enthusiast Loïck Eeman enjoying wingfoiling at sunset">
             </div>
-        </div>    
+            <section>
+                <h2>What You Will Find Here</h2>
+                <p>This portfolio highlights the main areas of my journey:</p>
+                <ul>
+                    <li><strong>• Maritime Career</strong> - Sea experience, training, certifications, and my pathway toward becoming an officer.</li>
+                    <li><strong>• Competitive Sailing</strong> - My racing history, roles onboard, regattas, and long-term ambitions.</li>
+                    <li><strong>• Offshore Cruising</strong> - Stories and photos from my four-year voyage, as well as  my expeditions to Patagonia and Antarctica.</li>
+                    <li><strong>• Languages</strong> - The languages I speak and use in maritime and international environments.</li>
+                    <li><strong>• Downloadable CVs</strong> - My maritime and sailing CVs, available for download.</li>
+                </ul>
+                <p>Each section offers a clear view of my development as a mariner, sailor, and offshore explorer.</p>
+            </section>
+            <section>
+                <h2>My Vision</h2>
+                
+                <p>My long-term goal is to build a career founded on seamanship, safety, and continuous learning - progressing from Watchkeeper Deck to Chief Mate and eventually Master.
+                At the same time, I remain committed to competitive sailing, with ambitions in foiling classes and professional pathways such as SailGP and the America's Cup.
+                <br>I aim to bring together the technical discipline of the merchant navy and the performance-driven mindset of high-level sailing.</p>
+            </section>
+            <section>
+                <h2>Thank You for Visiting</h2>
+                <p>Thank you for taking the time to explore my portfolio.Feel free to navigate through the pages, follow my journey, and reach out for maritime opportunities, racing projects, or collaboration.</p>
+            </section>
+        </div>
+     </main>
     <!-- Vercel Analytics -->
-    <script defer src="/_vercel/insights/script.js"></script>
-     </section>
+     <script defer src="/_vercel/insights/script.js"></script>
     </body>
 </html>
