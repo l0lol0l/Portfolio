@@ -220,7 +220,7 @@ label #cancel {
    Main Content
    =============================== */
 main {
-    background: url("../assets/images/background_languages.jpg") no-repeat;
+    background: url("../assets/images/Background_languages.jpg") no-repeat;
     background-position: center;
     background-size: cover;
     color: var(--text-color);

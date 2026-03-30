@@ -138,7 +138,7 @@ label #cancel {
    Main Content
    =============================== */
 main {
-    background: url("../assets/images/Fond_baleines_original.jpg") no-repeat;
+    background: url("../assets/images/Background_whales.jpg") no-repeat;
     background-position: center;
     background-size: cover;
     color: var(--text-color);

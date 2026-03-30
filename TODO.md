@@ -1,10 +1,12 @@
-# TODO: Clean up Languages Page Code
 
-## HTML Fixes
-- [x] Fix improper closing of `<main>` tag
-- [x] Add semantic containers for each language item
-- [x] Update favicon path to correct location
-- [x] Remove extra empty lines at end of file
+# Email Click Functionality Task
 
-## CSS Fixes
-- [x] Change `.language-box` width to `max-width` for better responsiveness
+## Steps:
+- [x] 1. Analyze files and create edit plan (completed)
+- [x] 2. Edit pages/contact.html to update email link to mailto:
+  * Change href="" to href="mailto:loickeeman@gmail.com"
+  * Update descriptive text
+  * Remove target="_blank"
+- [x] 3. Test the change
+- [x] 4. Mark complete and attempt_completion
+
