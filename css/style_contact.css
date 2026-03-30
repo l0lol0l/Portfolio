@@ -9,7 +9,7 @@
     --submenu-bg: #073348;
     --submenu-text: #e9f1f6;
     --text-color: white;
-    --form-accent: #28a745; /* Green for contact */
+    --form-accent: #375ec7; /* Green for contact */
 }
 
 /* ===============================
@@ -202,54 +202,16 @@ main li {
     margin-bottom: 20px;
 }
 
-.contact-links a {
+.contact-section a {
     color: var(--form-accent);
-    font-size: 18px;
+    text-shadow: 1px 0.5px 1px white;
+    font-size: 20px;
     display: block;
+    margin-top: 5px;
     margin-bottom: 10px;
 }
 
-.contact-links a:hover {
-    color: white;
-}
-
-.contact-form {
-    background: rgba(0,0,0,0.5);
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 16px;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid var(--accent-bg);
-    border-radius: 5px;
-    background: rgba(255,255,255,0.9);
-    font-size: 16px;
-}
-
-.contact-form button {
-    background: var(--form-accent);
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.contact-form button:hover {
-    background: #218838;
-}
-
-.scrollable-content {
+    .scrollable-content {
     height: calc(100vh - 50px);
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     overflow-y: auto;
